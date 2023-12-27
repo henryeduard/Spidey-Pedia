@@ -1,6 +1,6 @@
-Creado por <u>Enrique Eduardo Alcántara Arce<u>
+Creado por <u>Enrique Eduardo Alcántara Arce</u>
 
-Proyecto de Laravel <b>Spidey-Pedia<b>
+Proyecto de Laravel <b>Spidey-Pedia</b>
 Sistema web estilo enciclopedia de Spider-Man con el fin de mostrar los conocimientos de la tecnología del Framework.
 
 
