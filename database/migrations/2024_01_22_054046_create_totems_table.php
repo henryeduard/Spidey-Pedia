@@ -13,6 +13,21 @@ return new class extends Migration
     {
         Schema::create('totems', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre', 100);
+            // $table->foreignId('idUniverso')
+            //     ->nullable()
+            //     ->constrained("universos")
+            //     ->restrictOnDelete()
+            //     ->cascadeOnUpdate();
+            $table->integer('universo');
+            $table->string('alias', 100);
+            $table->string('primeraAparicion', 250);
+            $table->string('primeraAparicion', 250);
+            $table->integer('anioCreacion');
+            $table->text('poderes');
+            $table->text('historia');
+            $table->enum('vivido', ['V', 'M'])
+                ->comment("V: Vivo  -  M: Muerto");
             $table->timestamps();
         });
     }
