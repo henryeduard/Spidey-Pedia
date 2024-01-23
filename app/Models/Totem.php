@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Totem extends Model
 {
     use HasFactory;
+
+    protected $table = "totems";
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $guarded = [];
 }
