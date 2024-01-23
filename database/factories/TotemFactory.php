@@ -22,9 +22,9 @@ class TotemFactory extends Factory
             'alias' => $this->faker->userName,
             'primeraAparicion' => $this->faker->company,
             'anioCreacion' => $this->faker->year,
-            'poderes' => $this->faker->text,
-            'historia' => $this->faker->text,
-            'vivido' => $this->faker->randomLetter,
+            'poderes' => $this->faker->text($maxNbChars = 50),
+            'historia' => $this->faker->text($maxNbChars = 400),
+            'vivido' => $this->faker->randomElement($array = array ('V','M')),
         ];
     }
 }
