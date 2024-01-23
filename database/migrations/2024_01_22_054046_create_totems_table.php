@@ -22,7 +22,6 @@ return new class extends Migration
             $table->integer('universo');
             $table->string('alias', 100);
             $table->string('primeraAparicion', 250);
-            $table->string('primeraAparicion', 250);
             $table->integer('anioCreacion');
             $table->text('poderes');
             $table->text('historia');
