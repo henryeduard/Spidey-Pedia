@@ -17,4 +17,26 @@ class Totem extends Model
      * @var array<int, string>
      */
     protected $guarded = [];
+
+    // Devuelve el estado de vivido en STRING
+    public function vividoToString()
+    {
+        $estadoVivido = $this->vivido;
+        $stringVivido = "";
+
+        switch($estadoVivido) {
+            case 'V':
+                $stringVivido = "Vivo";
+                break;
+
+            case 'M':
+                $stringVivido = "Muerto";
+                break;
+            
+            default:
+                break;
+        }
+
+        return $stringVivido;
+    }
 }
