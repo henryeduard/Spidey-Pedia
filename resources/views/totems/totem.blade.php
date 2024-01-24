@@ -11,14 +11,14 @@
 
     <body>
         <div>
-            <p>Nombre:</p>
-            <p>Universo:</p>
-            <p>Alias:</p>
-            <p>Primera aparición:</p>
-            <p>Año de creación:</p>
-            <p>Poderes:</p>
-            <p>Historia:</p>
-            <p>Vivido:</p>
+            <p>Nombre: <b>{{ $totem->nombre }}</b></p>
+            <p>Universo: <b>{{ $totem->universo }}</b></p>
+            <p>Alias: <b>{{ $totem->alias }}</b></p>
+            <p>Primera aparición: <b>{{ $totem->primeraAparicion }}</b></p>
+            <p>Año de creación: <b>{{ $totem->anioCreacion }}</b></p>
+            <p>Poderes: <b>{{ $totem->poderes }}</b></p>
+            <p>Historia: <b>{{ $totem->historia }}</b></p>
+            <p>Vivido: <b>{{ $totem->vividoToString() }}</b></p>
         </div>
     </body>
 
