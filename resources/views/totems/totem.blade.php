@@ -1,3 +1,15 @@
+{{-- @component('components.layoutMenu')
+    @slot('linksCss')
+        <link rel="stylesheet" href="{{ URL::asset('css/validacion.css') }}">
+    @endslot
+
+    @slot('JSscripts')
+        <script src="{{ URL::asset('js/inputFecha.js') }}"></script>
+        <script src="{{ URL::asset('js/productosAcademicos/actividadTitulacion.js') }}"></script>
+        <script src="{{ URL::asset('js/productosAcademicos/validacionActividadTitulacion.js') }}"></script>
+    @endslot
+
+    @slot('body') --}}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,3 +35,5 @@
     </body>
 
 </html>
+    {{-- @endslot
+@endcomponent --}}
