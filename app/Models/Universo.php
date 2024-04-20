@@ -9,7 +9,7 @@ class Universo extends Model
 {
     use HasFactory;
 
-    protected $table = "totems";
+    protected $table = "universos";
 
     /**
      * The attributes that are mass assignable.

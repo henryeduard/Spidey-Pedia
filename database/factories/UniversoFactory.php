@@ -19,7 +19,7 @@ class UniversoFactory extends Factory
         return [
             'numero' => $this->faker->randomNumber,
             'descripcion' => $this->faker->text($maxNbChars = 400),
-            'tipoMedia' => $this->faker->randomElement($array = array ('Cómic','Película', 'Videojuego')),
+            'media' => $this->faker->randomElement($array = array ('Cómic','Película', 'Videojuego')),
         ];
     }
 }
