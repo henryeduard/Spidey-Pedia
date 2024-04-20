@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ControladorTotem extends Controller
 {
     /*
-     *
+     * Redirige a la vista de listado
     */
     public function vistaListado(){
         $totems = Totem::all();
@@ -19,7 +19,7 @@ class ControladorTotem extends Controller
     }
 
     /*
-     *
+     * Redirige a la vista individual de un totem
     */
     public function vistaIndividual($alias){
         $totem = Totem::where('alias', $alias)->first();

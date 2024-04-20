@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ControladorUniverso extends Controller
 {
     /*
-     *
+     * Redirige a la vista de listado
     */
     public function vistaListado(){
         $universos = Universo::all();
@@ -19,7 +19,7 @@ class ControladorUniverso extends Controller
     }
 
     /*
-     *
+     * Redirige a la vista individual de un universo
     */
     public function vistaIndividual($numero){
         $universo = Universo::where('numero', $numero)->first();
