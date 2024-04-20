@@ -17,14 +17,15 @@ class TotemFactory extends Factory
     public function definition(): array
     {
         return [
-            'nombre' => $this->faker->name,
-            'universo' => $this->faker->randomNumber,
             'alias' => $this->faker->userName,
-            'primeraAparicion' => $this->faker->company,
+            'nombre' => $this->faker->name,
+            'apodo' => $this->faker->domainWord,
+            'universo' => $this->faker->randomNumber,
+            'primeraAparicion' => $this->faker->secondaryAddress,
             'anioCreacion' => $this->faker->year,
             'poderes' => $this->faker->text($maxNbChars = 50),
             'historia' => $this->faker->text($maxNbChars = 400),
-            'vivido' => $this->faker->randomElement($array = array ('V','M')),
+            'vivido' => $this->faker->randomElement($array = array ('V','M', 'D')),
         ];
     }
 }

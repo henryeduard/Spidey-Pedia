@@ -32,6 +32,10 @@ class Totem extends Model
             case 'M':
                 $stringVivido = "Muerto";
                 break;
+
+            case 'D':
+                $stringVivido = "Estado Desconocido";
+                break;
             
             default:
                 break;

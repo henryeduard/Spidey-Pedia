@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/spider-totem/{nombre}-{universo}', [ControladorTotem::class, 'vistaIndividual'])->name('vistaPlanPersonal');
+Route::get('/spider-totem/{alias}-{universo}', [ControladorTotem::class, 'vistaIndividual'])->name('entradaTotem');
