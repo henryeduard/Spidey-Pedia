@@ -7,6 +7,20 @@ use Illuminate\Http\Request;
 
 class ControladorTotem extends Controller
 {
+    /*
+     *
+    */
+    public function vistaListado(){
+        $totems = Totem::all();
+
+        return view('totems.listadoTotems', [
+            'totems' => $totems,
+        ]);
+    }
+
+    /*
+     *
+    */
     public function vistaIndividual($alias){
         $totem = Totem::where('alias', $alias)->first();
 

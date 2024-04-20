@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/spider-totems', [ControladorTotem::class, 'vistaListado'])->name('listadoTotem');
+
 Route::get('/spider-totem/{alias}-{universo}', [ControladorTotem::class, 'vistaIndividual'])->name('entradaTotem');
