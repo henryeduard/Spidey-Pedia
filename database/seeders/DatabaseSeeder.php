@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Totem;
+use App\Models\Traje;
 use App\Models\Universo;
 use Illuminate\Database\Seeder;
 
@@ -24,5 +25,6 @@ class DatabaseSeeder extends Seeder
 
         Totem::factory(10)->create();
         Universo::factory(10)->create();
+        Traje::factory(10)->create();
     }
 }
