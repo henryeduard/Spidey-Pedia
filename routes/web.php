@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ControladorTotem;
+use App\Http\Controllers\ControladorTraje;
 use App\Http\Controllers\ControladorUniverso;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,7 @@ Route::get('/spider-totem/{alias}-{universo}', [ControladorTotem::class, 'vistaI
 // Universos
 Route::get('/universos', [ControladorUniverso::class, 'vistaListado'])->name('listadoUniverso');
 Route::get('/universo/{numero}', [ControladorUniverso::class, 'vistaIndividual'])->name('entradaUniverso');
+
+// Trajes
+Route::get('/trajes', [ControladorTraje::class, 'vistaListado'])->name('listadoTraje');
+Route::get('/traje/{nombre}-{totem}', [ControladorTraje::class, 'vistaIndividual'])->name('entradaTraje');
