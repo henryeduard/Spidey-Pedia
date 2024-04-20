@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('numero', 25);
             $table->text('descripcion');
-            $table->string('tipoMedia', 100);
-            // $table->foreignId('idTipoMedia')
+            $table->string('media', 100);
+            // $table->foreignId('idMedia')
             //     ->nullable()
-            //     ->constrained("tipoMedia")
+            //     ->constrained("media")
             //     ->restrictOnDelete()
             //     ->cascadeOnUpdate();
             $table->timestamps();

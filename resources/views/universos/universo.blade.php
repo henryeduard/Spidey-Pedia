@@ -13,7 +13,9 @@
         <div>
             <p>Número: <b>{{ $universo->numero }}</b></p>
             <p>Descripción: <b>{{ $universo->descripcion }}</b></p>
-            <p>Tipo de Media: <b>{{ $universo->tipoMedia }}</b></p>
+            {{-- <p>Conocido por: <b>{{ $universo->media->nombre }}</b></p> --}}
+            <p>Tipo de Media: <b>{{ $universo->media }}</b></p>
+            {{-- <p>Tipo de Media: <b>{{ $universo->media->tipoMedia->nombre }}</b></p> --}}
         </div>
     </body>
 
