@@ -13,14 +13,16 @@ return new class extends Migration
     {
         Schema::create('trajes', function (Blueprint $table) {
             $table->id();
+
             $table->string('nombre', 50);
             $table->text('descripcion');
-            $table->string('totem', 50);
-            // $table->foreignId('idTotem')
-            //     ->nullable()
-            //     ->constrained("totems")
-            //     ->restrictOnDelete()
-            //     ->cascadeOnUpdate();
+            // $table->string('totem', 50);
+            $table->foreignId('idTotem')
+                ->constrained("totems")
+                ->restrictOnDelete()
+                ->cascadeOnUpdate();
+            $table->string('imagen', 50)->nullable();
+
             $table->timestamps();
         });
     }
