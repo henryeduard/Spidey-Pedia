@@ -13,14 +13,11 @@ return new class extends Migration
     {
         Schema::create('universos', function (Blueprint $table) {
             $table->id();
+
             $table->string('numero', 25);
             $table->text('descripcion');
-            $table->string('media', 100);
-            // $table->foreignId('idMedia')
-            //     ->nullable()
-            //     ->constrained("media")
-            //     ->restrictOnDelete()
-            //     ->cascadeOnUpdate();
+            $table->string('imagen', 50)->nullable();
+
             $table->timestamps();
         });
     }
