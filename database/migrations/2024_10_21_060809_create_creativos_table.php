@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('creativos', function (Blueprint $table) {
             $table->id();
+
+            $table->string('nombre', 100);
+            $table->string('nacionalidad', 100)->nullable();
+            $table->date('nacimiento')->nullable();
+            $table->date('fallecimiento')->nullable();
+            $table->text('descripcion')->nullable();
+            $table->string('link', 100)->nullable();
+            $table->string('imagen', 50)->nullable();
+
             $table->timestamps();
         });
     }
