@@ -11,18 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('medias', function (Blueprint $table) {
+        Schema::create('media', function (Blueprint $table) {
             $table->id();
 
             $table->string('nombre', 100);
-            $table->string('tipoMedia', 100);
             // $table->foreignId('idMedia')
-            //     ->nullable()
-            //     ->constrained("media")
-            //     ->restrictOnDelete()
-            //     ->cascadeOnUpdate();
+            $table->enum('tipoMedia', ['C', 'P', 'V', 'Tv', 'M', 'Te', 'F', 'A'])
+                ->comment("C: Cómic -  
+                           P: Película - 
+                           V: Videojuego - 
+                           Tv: SerieTV - 
+                           M: Manga - 
+                           Te: Teatro - 
+                           F: Figura Coleccionable - 
+                           A: Arte");
             $table->date('fechaEstreno')->nullable();
             $table->text('descripcion');
+            $table->string('imagen', 50)->nullable();
 
             $table->timestamps();
         });
@@ -33,6 +38,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('medias');
+        Schema::dropIfExists('media');
     }
 };
