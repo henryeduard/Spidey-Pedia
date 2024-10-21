@@ -20,7 +20,7 @@ return new class extends Migration
                 ->comment("C: Cómic -  
                            P: Película - 
                            V: Videojuego - 
-                           Tv: SerieTV - 
+                           Tv: Serie TV/Serie Animada/Anime - 
                            M: Manga - 
                            Te: Teatro - 
                            F: Figura Coleccionable - 
