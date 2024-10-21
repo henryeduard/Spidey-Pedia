@@ -13,6 +13,27 @@ return new class extends Migration
     {
         Schema::create('participaciones', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('idMedia')
+                ->constrained("media")
+                ->restrictOnDelete()
+                ->cascadeOnUpdate();
+            $table->foreignId('idCreativo')
+                ->constrained("creativos")
+                ->restrictOnDelete()
+                ->cascadeOnUpdate();
+            $table->enum('tipoMedia', ['Dib', 'E', 'Col', 'Dir', 'P', 'De', 'A', 'Av', 'Com'])
+                ->comment("Dib: Dibujante -  
+                           E: Escritor - 
+                           Col: Colorista - 
+                           Dir: Director - 
+                           P: Productor - 
+                           De: Desarrollador - 
+                           A: Actor - 
+                           Av: Actor de voz -
+                           Com: Compositor");
+            $table->string('imagen', 50)->nullable();
+
             $table->timestamps();
         });
     }
