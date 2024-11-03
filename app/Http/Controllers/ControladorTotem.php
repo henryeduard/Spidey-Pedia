@@ -18,6 +18,7 @@ class ControladorTotem extends Controller
         ]);
     }
 
+
     /*
      * Redirige a la vista individual de un totem
     */
@@ -27,5 +28,13 @@ class ControladorTotem extends Controller
         return view('totems.totem', [
             'totem' => $totem,
         ]);
+    }
+
+
+    /*
+     * Redirige a la vista individual de un totem
+    */
+    public function vistaRegistro(){
+        return view('totems.registroTotem', []);
     }
 }
