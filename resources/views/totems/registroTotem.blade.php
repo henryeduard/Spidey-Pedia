@@ -18,6 +18,9 @@
             {{-- <form method="POST" enctype="multipart/form-data" id="registroForm" action="registro"
                         class="p-3 bg-body-secondary pt-3  rounded-3 mt-5 mx-auto"> --}}
             <form method="POST" enctype="multipart/form-data" id="registroForm" action="{{ route('registroTotem') }}" class="">
+                @csrf
+                <!-- Equivalent to... -->
+                {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}" /> --}}
 
                 {{-- <div class="row mt-2">
                     <label class="form-label text-uppercase fw-bold" style="font-size:13px;" for="nombre">
