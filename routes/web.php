@@ -20,16 +20,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Universos
+Route::get('/universos', [ControladorUniverso::class, 'vistaListado'])->name('listadoUniverso');
+Route::get('/universo/{numero}', [ControladorUniverso::class, 'vistaIndividual'])->name('entradaUniverso');
+
+Route::get('/universo/registro', [ControladorUniverso::class, 'vistaRegistro'])->name('vistaRegistroTotem');
+
 // Totems
 Route::get('/spider-totems', [ControladorTotem::class, 'vistaListado'])->name('listadoTotem');
 Route::get('/spider-totem/{alias}-{universo}', [ControladorTotem::class, 'vistaIndividual'])->name('entradaTotem');
 
 Route::get('/spider-totem/registro', [ControladorTotem::class, 'vistaRegistro'])->name('vistaRegistroTotem');
 Route::post('/spider-totem/registro', [ControladorTotem::class, 'registro'])->name('registroTotem');
-
-// Universos
-Route::get('/universos', [ControladorUniverso::class, 'vistaListado'])->name('listadoUniverso');
-Route::get('/universo/{numero}', [ControladorUniverso::class, 'vistaIndividual'])->name('entradaUniverso');
 
 // Trajes
 Route::get('/trajes', [ControladorTraje::class, 'vistaListado'])->name('listadoTraje');

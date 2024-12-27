@@ -18,6 +18,7 @@ class ControladorUniverso extends Controller
         ]);
     }
 
+
     /*
      * Redirige a la vista individual de un universo
     */
@@ -27,5 +28,13 @@ class ControladorUniverso extends Controller
         return view('universos.universo', [
             'universo' => $universo,
         ]);
+    }
+
+
+    /*
+     * Redirige a la vista de registro de un universo
+    */
+    public function vistaRegistro(){
+        return view('universos.registroUniverso', []);
     }
 }
